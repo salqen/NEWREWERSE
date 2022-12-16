@@ -1,0 +1,28 @@
+@use "../scss/" as *;
+
+.about {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+
+  @include desktop-1300 {
+    padding-top: 6rem;
+    height: 120vh;
+  }
+}
+
+.hero {
+  display: flex;
+  padding-top: 150px;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  @include desktop-1300 {
+    min-height: 120vh;
+    padding-top: 6rem;
+  }
+}
