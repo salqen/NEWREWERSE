@@ -1,4 +1,4 @@
-import { Suspense, useLayoutEffect, useRef } from "react";
+import { Suspense, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import {
   ScrollControls,
@@ -14,10 +14,30 @@ import * as THREE from "three";
 import environment from "../../assets/environment/violet.hdr";
 import { Asteroid2 } from "../Models/Asteroid";
 import asteroid1 from "../../assets/models/2_ast.glb";
+import { useMediaQuery } from "@mui/material";
 
 export default function UniverseCanvas(props) {
   const envMap = useEnvironment({ files: environment });
   let camera = new THREE.PerspectiveCamera(90, 1.5, 0.1, 1000);
+  const [pages, setPages] = useState(14.15);
+  const mediaXL = useMediaQuery("(max-width:2200px)");
+  const mediaLG = useMediaQuery("(max-width:1300px)");
+  const mediaSM = useMediaQuery("(max-width:900px)");
+  const mediaXS = useMediaQuery("(max-width:600px)");
+  useEffect(() => {
+    if (mediaXL) {
+      setPages(14.6);
+    }
+    if (mediaLG) {
+      setPages(17.4);
+    }
+    if (mediaSM) {
+      setPages(20.15);
+    }
+    if (mediaXS) {
+      setPages(20.6);
+    }
+  }, [mediaXL, mediaLG, mediaSM, mediaXS]);
 
   return (
     <Canvas camera={camera} dpr={[1, 2]} shadows>
@@ -133,7 +153,7 @@ export default function UniverseCanvas(props) {
       <Environment map={envMap} background={true} />
       <Suspense fallback={null}>
         {/* Wrap contents you want to scroll into <ScrollControls> */}
-        <ScrollControls pages={14.3} damping={25}>
+        <ScrollControls pages={pages} damping={25}>
           <Scroll
             id="scroll-area"
             html
