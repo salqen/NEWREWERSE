@@ -1,6 +1,5 @@
 import Header from "./components/Header";
 import { Route, Routes } from "react-router-dom";
-import UniverseCanvas from "./components/Canvas/Universe";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "@mui/material";
 import "./App.scss";
@@ -9,6 +8,7 @@ import { theme } from "./styles/theme.js";
 import HomePage from "./pages/HomePage";
 import Footer from "./components/Footer";
 import Contact from "./pages/Contact";
+import UniverseCanvas from "./components/Canvas/Universe";
 
 export default function App() {
   const [open, setOpen] = useState(false);
@@ -25,12 +25,11 @@ export default function App() {
     }, 1600);
   };
 
-
   return (
     <>
       <ThemeProvider theme={theme}>
         <BrowserRouter>
-        <Header openMenu={isOpen} closeMenu={closeMenu} menuState={open} />
+          <Header openMenu={isOpen} closeMenu={closeMenu} menuState={open} />
           <Routes>
             <Route
               path="/"
@@ -53,7 +52,7 @@ export default function App() {
                         marginInline: "auto",
                       }}
                     >
-                      <Contact/>
+                      <Contact />
                     </h6>
                   }
                 />

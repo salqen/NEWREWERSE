@@ -165,9 +165,7 @@ html {
 }
 
 body {
-  background-image: url("./pages/galaxy.jpg");
-  background-size:cover;
-  opacity: 0.8;
+  background-size: cover;
   color: var(--background-body);
   font-size: 20px;
   line-height: 30px;
@@ -2687,7 +2685,6 @@ a {
       width: 100%;
       &:first-child {
         width: 100%;
-        
       }
       &:nth-child(2) {
         width: calc(100%);
