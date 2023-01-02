@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import About from "../components/About/About";
 import Banner from "../components/Banner/Banner";
 import BlockChain from "../components/Blockchain/Blockchain";
@@ -14,14 +14,18 @@ import Vision from "../components/Vision/Vision";
 import "./home.scss";
 
 const HomePage = (props) => {
+  /* const testref = useRef(null);
+  const executeScroll = () =>
+    testref.current.scrollIntoView({ behavior: "smooth" }); */
+  /* const myRef = useRef(null);
+  const executeScroll = () =>
+    myRef.current.scrollIntoView({ behavior: "smooth", block: "start" }); */
   return (
     <>
-      <div className="hero">
+      <div className="hero" id="/">
         <Banner />
       </div>
-      <div className="about" id="creative">
-        <About />
-      </div>
+
       <div className="vision" id="mission">
         <Vision />
       </div>

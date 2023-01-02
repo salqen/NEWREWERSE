@@ -4,12 +4,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { HiMenu } from "react-icons/hi";
 import { BiMenuAltRight } from "react-icons/bi";
 import logodark from "../assets/images/logo/rewelogo.png";
-import { useNavigate } from "react-router-dom";
-import $ from "jquery";
+import styled from "@emotion/styled";
 
 function Navbar(props) {
-  const navigate = useNavigate();
-
   //lets start animation
   const item = {
     exit: {
@@ -48,11 +45,10 @@ function Navbar(props) {
               X
             </div>
             <motion.a
-              href="/"
+              href="#hero"
               style={{ cursor: "pointer" }}
               onClick={() => {
                 props.closeMenu();
-                navigate("/");
               }}
               initial={{ y: 80, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -69,11 +65,10 @@ function Navbar(props) {
               00 | Home
             </motion.a>
             <motion.a
-              href="#creative"
+              href="/"
               style={{ cursor: "pointer" }}
               onClick={() => {
                 props.closeMenu();
-                navigate("#creative");
               }}
               initial={{ y: 80, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -90,11 +85,10 @@ function Navbar(props) {
               01 | Creative Studio 3.0
             </motion.a>
             <motion.a
-              href="/#mission"
+              href="#mission"
               style={{ cursor: "pointer" }}
               onClick={() => {
                 props.closeMenu();
-                navigate("/#mission");
               }}
               initial={{ y: 80, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -111,11 +105,10 @@ function Navbar(props) {
               02 | MISSION
             </motion.a>
             <motion.a
-              href="/#deeckfrens"
+              href="#deeckfrens"
               style={{ cursor: "pointer" }}
               onClick={() => {
                 props.closeMenu();
-                navigate("/#deeckfrens");
               }}
               initial={{ y: 80, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -132,10 +125,9 @@ function Navbar(props) {
               03 | Deeck Frens
             </motion.a>
             <motion.a
-              href="/#blockchain"
+              href="#blockchain"
               onClick={() => {
                 props.closeMenu();
-                navigate("/#blockchain");
               }}
               initial={{ y: 80, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -152,10 +144,9 @@ function Navbar(props) {
               04 | Blockchain
             </motion.a>
             <motion.a
-              href="/#blockchips"
+              href="#blockchips"
               onClick={() => {
                 props.closeMenu();
-                navigate("/#blockchips");
               }}
               initial={{ y: 80, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -172,10 +163,9 @@ function Navbar(props) {
               05 | Blockchips
             </motion.a>
             <motion.a
-              href="/#phigital"
+              href="#phigital"
               onClick={() => {
                 props.closeMenu();
-                navigate("/#phigital");
               }}
               initial={{ y: 80, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -192,10 +182,9 @@ function Navbar(props) {
               06 | Phigital Developing
             </motion.a>
             <motion.a
-              href="/#roadmap"
+              href="#roadmap"
               onClick={() => {
                 props.closeMenu();
-                navigate("/#roadmap");
               }}
               initial={{ y: 80, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -215,7 +204,6 @@ function Navbar(props) {
               href="#team"
               onClick={() => {
                 props.closeMenu();
-                navigate("#team");
               }}
               initial={{ y: 80, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -235,7 +223,6 @@ function Navbar(props) {
               href="#partners"
               onClick={() => {
                 props.closeMenu();
-                navigate("#partners");
               }}
               initial={{ y: 80, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -255,7 +242,6 @@ function Navbar(props) {
               href="#contact"
               onClick={() => {
                 props.closeMenu();
-                navigate("#contact");
               }}
               initial={{ y: 80, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -277,7 +263,7 @@ function Navbar(props) {
       <div
         style={{
           position: "absolute",
-          width: "100%",
+          width: "100vw",
           pointerEvents: "none",
           display: "flex",
           justifyContent: "center",

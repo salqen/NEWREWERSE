@@ -33,9 +33,7 @@ export default function App() {
           <Routes>
             <Route
               path="/"
-              element={
-                <UniverseCanvas content={<HomePage displayProps={display} />} />
-              }
+              element={<UniverseCanvas content={<HomePage />} />}
             />
 
             <Route
@@ -65,3 +63,6 @@ export default function App() {
     </>
   );
 }
+
+/* 
+content={<HomePage displayProps={display} />}  */

@@ -26,6 +26,7 @@ const FooterContainer = styled(Box)`
   position: fixed;
   height: 6rem;
   bottom: 0;
+  z-index: 99;
   align-items: center;
   background: transparent;
   color: white;
@@ -41,7 +42,7 @@ const Footer = (props) => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth"
+      behavior: "smooth",
     });
   };
   useEffect(() => {
@@ -73,10 +74,15 @@ const Footer = (props) => {
           </Link>
         </Stack>
         <Stack direction="row" spacing={2}>
-
-         
-            <FooterTypography><a href="https://rewerse.space/rewerse-litepaper.pdf" target="_blank">REWERSE LITEPAPER V1.0</a></FooterTypography>
-          
+          <FooterTypography>
+            <a
+              href="https://rewerse.space/rewerse-litepaper.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              REWERSE LITEPAPER V1.0
+            </a>
+          </FooterTypography>
 
           <FooterTypography>|</FooterTypography>
           <Link to="/">
@@ -84,13 +90,25 @@ const Footer = (props) => {
           </Link>
         </Stack>
         <Stack direction="row" spacing={2}>
-        <a href="https://twitter.com/rewersespace" target="_blank">
+          <a
+            href="https://twitter.com/rewersespace"
+            target="_blank"
+            rel="noreferrer"
+          >
             <Twitter fontSize="large" />
           </a>
-          <a  href="https://instagram.com/rewersespace" target="_blank">
+          <a
+            href="https://instagram.com/rewersespace"
+            target="_blank"
+            rel="noreferrer"
+          >
             <Instagram fontSize="large" />
           </a>
-          <a href="https://www.youtube.com/channel/UCiFSQ5CoGo-mrCA5pJJOKMg" target="_blank">
+          <a
+            href="https://www.youtube.com/channel/UCiFSQ5CoGo-mrCA5pJJOKMg"
+            target="_blank"
+            rel="noreferrer"
+          >
             <YouTube fontSize="large" />
           </a>
         </Stack>

@@ -2,7 +2,7 @@ import { Box, Grid } from "@mui/material";
 import React from "react";
 import styled from "@emotion/styled";
 import "./styles.scss";
-import lodka from "../../assets/images/slider/ship_3D.png"
+import lodka from "../../assets/images/slider/ship_3D.png";
 
 const VisionContent = styled(Box)`
   min-height: 100vh;
@@ -20,12 +20,11 @@ const VisionContent = styled(Box)`
   }
 `;
 
-
 const DiscoverContent = styled(Box)`
   min-height: 70vh;
   display: flex;
   margin-top: 100px;
-  padding:40px;
+  padding: 40px;
   align-items: center;
   justify-content: center;
   flex-direction: row;
@@ -74,15 +73,27 @@ const Vision = (props) => {
       <DiscoverContent>
         <DiscoverContentContainter>
           <div>
-           
-            <h2 className="heading" style={{ fontSize:"60px",textAlign: "left" }}>
-            MISSION
-            </h2> <br></br>
+            <h2
+              className="heading"
+              style={{ fontSize: "60px", textAlign: "left" }}
+            >
+              MISSION
+            </h2>
+            <br></br>
             <p className="sub-heading" style={{ textAlign: "left" }}>
-            Our mission is to revolutionize the real estate and gaming industries by fully utilizing the potential of linking blockchain technologies with these markets. We want to become a leading player in the web 3.0 gaming industry and real estate industries.
-Our company, Rewerse, symbolizes the opposite side of the classic market we know, offering a fresh perspective on the new digital world. Web 3.0 will change old models for the better, and you can join us on our journey to success. At Rewerse, we also want to leave a lasting legacy for future generations, so every project in our portfolio contains a deeper meaning and is of the highest quality.
-            </p><br></br>
-         
+              Our mission is to revolutionize the real estate and gaming
+              industries by fully utilizing the potential of linking blockchain
+              technologies with these markets. We want to become a leading
+              player in the web 3.0 gaming industry and real estate industries.
+              Our company, Rewerse, symbolizes the opposite side of the classic
+              market we know, offering a fresh perspective on the new digital
+              world. Web 3.0 will change old models for the better, and you can
+              join us on our journey to success. At Rewerse, we also want to
+              leave a lasting legacy for future generations, so every project in
+              our portfolio contains a deeper meaning and is of the highest
+              quality.
+            </p>
+            <br></br>
           </div>
         </DiscoverContentContainter>
         <Box style={{ flexBasis: "50%" }}>

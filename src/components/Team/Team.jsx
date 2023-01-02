@@ -11,7 +11,6 @@ import React, { useState } from "react";
 import styled from "@emotion/styled";
 import "./styles.scss";
 import "react-image-gallery/styles/scss/image-gallery.scss";
-
 import profile1 from "../../assets/images/team/daveprofil.jpg";
 import profile2 from "../../assets/images/team/profilovka2.jpg";
 import profile3 from "../../assets/images/team/profilovka3.jpg";
@@ -204,16 +203,29 @@ const Team = () => {
             <TeamContent>
               <Grid
                 container
-                spacing={{ xs: 2, md: 3 }}
-                columns={{ xs: 2, sm: 6, md: 18, xl: 24 }}
-                sx={{ justifyContent: "center" }}
+                columns={{ xs: 2, sm: 6, md: 18, xl: 30 }}
+                sx={{
+                  justifyContent: "center",
+                  gap: "4rem",
+                }}
               >
-                <GridItem item xs={2} sm={4} md={4}>
-                  <ReactCardFlip isFlipped={flip[0]} flipDirection="horizontal">
-                    <Card
-                      sx={{ maxWidth: 345 }}
-                      onMouseEnter={() => changeFlipToTrue(0)}
-                    >
+                <GridItem
+                  item
+                  xs={2}
+                  sm={4}
+                  md={4}
+                  onMouseEnter={() => {
+                    changeFlipToTrue(0);
+                  }}
+                  onMouseLeave={() => changeFlipToFalse(0)}
+                >
+                  <ReactCardFlip
+                    isFlipped={flip[0]}
+                    flipDirection="horizontal"
+                    flipSpeedFrontToBack={0.1}
+                    flipSpeedBackToFront={0.1}
+                  >
+                    <Card sx={{ maxWidth: 345 }}>
                       <CardMedia
                         component="img"
                         height="140"
@@ -238,10 +250,7 @@ const Team = () => {
                         </Typography>
                       </CardContent>
                     </Card>
-                    <Card
-                      sx={{ maxWidth: 345, height: "100%" }}
-                      onMouseLeave={() => changeFlipToFalse(0)}
-                    >
+                    <Card sx={{ maxWidth: 345, height: "100%" }}>
                       <CardContent>
                         <Typography
                           variant="h5"
@@ -257,7 +266,11 @@ const Team = () => {
                           gutterBottom
                           sx={{
                             textAlign: "left",
-                            fontSize: { xxs: "0.5", sm: "0.8rem", lg: "1rem" },
+                            fontSize: {
+                              xxs: "0.5",
+                              sm: "0.8rem",
+                              lg: "1rem",
+                            },
                             lineHeight: "1",
                             paddingTop: "auto",
                           }}
@@ -296,12 +309,21 @@ const Team = () => {
                     </Card>
                   </ReactCardFlip>
                 </GridItem>
-                <GridItem item xs={2} sm={4} md={4}>
-                  <ReactCardFlip isFlipped={flip[1]} flipDirection="horizontal">
-                    <Card
-                      sx={{ maxWidth: 345 }}
-                      onMouseEnter={() => changeFlipToTrue(1)}
-                    >
+                <GridItem
+                  item
+                  xs={2}
+                  sm={4}
+                  md={4}
+                  onMouseEnter={() => changeFlipToTrue(1)}
+                  onMouseLeave={() => changeFlipToFalse(1)}
+                >
+                  <ReactCardFlip
+                    isFlipped={flip[1]}
+                    flipDirection="horizontal"
+                    flipSpeedFrontToBack={0.1}
+                    flipSpeedBackToFront={0.1}
+                  >
+                    <Card sx={{ maxWidth: 345 }}>
                       <CardMedia
                         component="img"
                         height="140"
@@ -326,10 +348,7 @@ const Team = () => {
                         </Typography>
                       </CardContent>
                     </Card>
-                    <Card
-                      sx={{ maxWidth: 345, minHeight: "100%" }}
-                      onMouseLeave={() => changeFlipToFalse(1)}
-                    >
+                    <Card sx={{ maxWidth: 345, minHeight: "100%" }}>
                       <CardContent>
                         <Typography
                           variant="h5"
@@ -385,12 +404,21 @@ const Team = () => {
                     </Card>
                   </ReactCardFlip>
                 </GridItem>
-                <GridItem item xs={2} sm={4} md={4}>
-                  <ReactCardFlip isFlipped={flip[2]} flipDirection="horizontal">
-                    <Card
-                      sx={{ maxWidth: 345 }}
-                      onMouseEnter={() => changeFlipToTrue(2)}
-                    >
+                <GridItem
+                  item
+                  xs={2}
+                  sm={4}
+                  md={4}
+                  onMouseEnter={() => changeFlipToTrue(2)}
+                  onMouseLeave={() => changeFlipToFalse(2)}
+                >
+                  <ReactCardFlip
+                    isFlipped={flip[2]}
+                    flipDirection="horizontal"
+                    flipSpeedFrontToBack={0.1}
+                    flipSpeedBackToFront={0.1}
+                  >
+                    <Card sx={{ maxWidth: 345 }}>
                       <CardMedia
                         component="img"
                         height="140"
@@ -415,10 +443,7 @@ const Team = () => {
                         </Typography>
                       </CardContent>
                     </Card>
-                    <Card
-                      sx={{ maxWidth: 345, height: "100%" }}
-                      onMouseLeave={() => changeFlipToFalse(2)}
-                    >
+                    <Card sx={{ maxWidth: 345, height: "100%" }}>
                       <CardContent>
                         <Typography
                           variant="h5"
@@ -473,12 +498,21 @@ const Team = () => {
                     </Card>
                   </ReactCardFlip>
                 </GridItem>
-                <GridItem item xs={2} sm={4} md={4}>
-                  <ReactCardFlip isFlipped={flip[3]} flipDirection="horizontal">
-                    <Card
-                      sx={{ maxWidth: 345 }}
-                      onMouseEnter={() => changeFlipToTrue(3)}
-                    >
+                <GridItem
+                  item
+                  xs={2}
+                  sm={4}
+                  md={4}
+                  onMouseEnter={() => changeFlipToTrue(3)}
+                  onMouseLeave={() => changeFlipToFalse(3)}
+                >
+                  <ReactCardFlip
+                    isFlipped={flip[3]}
+                    flipDirection="horizontal"
+                    flipSpeedFrontToBack={0.1}
+                    flipSpeedBackToFront={0.1}
+                  >
+                    <Card sx={{ maxWidth: 345 }}>
                       <CardMedia
                         component="img"
                         height="140"
@@ -503,10 +537,7 @@ const Team = () => {
                         </Typography>
                       </CardContent>
                     </Card>
-                    <Card
-                      sx={{ maxWidth: 345, height: "100%" }}
-                      onMouseLeave={() => changeFlipToFalse(3)}
-                    >
+                    <Card sx={{ maxWidth: 345, height: "100%" }}>
                       <CardContent>
                         <Typography
                           variant="h5"
@@ -561,12 +592,21 @@ const Team = () => {
                     </Card>
                   </ReactCardFlip>
                 </GridItem>
-                <GridItem item xs={2} sm={4} md={4}>
-                  <ReactCardFlip isFlipped={flip[4]} flipDirection="horizontal">
-                    <Card
-                      sx={{ maxWidth: 345 }}
-                      onMouseEnter={() => changeFlipToTrue(4)}
-                    >
+                <GridItem
+                  item
+                  xs={2}
+                  sm={4}
+                  md={4}
+                  onMouseEnter={() => changeFlipToTrue(4)}
+                  onMouseLeave={() => changeFlipToFalse(4)}
+                >
+                  <ReactCardFlip
+                    isFlipped={flip[4]}
+                    flipDirection="horizontal"
+                    flipSpeedFrontToBack={0.1}
+                    flipSpeedBackToFront={0.1}
+                  >
+                    <Card sx={{ maxWidth: 345 }}>
                       <CardMedia
                         component="img"
                         height="140"
@@ -591,10 +631,7 @@ const Team = () => {
                         </Typography>
                       </CardContent>
                     </Card>
-                    <Card
-                      sx={{ maxWidth: 345, height: "100%" }}
-                      onMouseLeave={() => changeFlipToFalse(4)}
-                    >
+                    <Card sx={{ maxWidth: 345, height: "100%" }}>
                       <CardContent>
                         <Typography
                           variant="h5"
@@ -651,12 +688,21 @@ const Team = () => {
                     </Card>
                   </ReactCardFlip>
                 </GridItem>
-                <GridItem item xs={2} sm={4} md={4}>
-                  <ReactCardFlip isFlipped={flip[5]} flipDirection="horizontal">
-                    <Card
-                      sx={{ maxWidth: 345 }}
-                      onMouseEnter={() => changeFlipToTrue(5)}
-                    >
+                <GridItem
+                  item
+                  xs={2}
+                  sm={4}
+                  md={4}
+                  onMouseEnter={() => changeFlipToTrue(5)}
+                  onMouseLeave={() => changeFlipToFalse(5)}
+                >
+                  <ReactCardFlip
+                    isFlipped={flip[5]}
+                    flipDirection="horizontal"
+                    flipSpeedFrontToBack={0.1}
+                    flipSpeedBackToFront={0.1}
+                  >
+                    <Card sx={{ maxWidth: 345 }}>
                       <CardMedia
                         component="img"
                         height="140"
@@ -681,10 +727,7 @@ const Team = () => {
                         </Typography>
                       </CardContent>
                     </Card>
-                    <Card
-                      sx={{ maxWidth: 345, height: "100%" }}
-                      onMouseLeave={() => changeFlipToFalse(5)}
-                    >
+                    <Card sx={{ maxWidth: 345, height: "100%" }}>
                       <CardContent>
                         <Typography
                           variant="h5"
@@ -740,12 +783,21 @@ const Team = () => {
                     </Card>
                   </ReactCardFlip>
                 </GridItem>
-                <GridItem item xs={2} sm={4} md={4}>
-                  <ReactCardFlip isFlipped={flip[6]} flipDirection="horizontal">
-                    <Card
-                      sx={{ maxWidth: 345 }}
-                      onMouseEnter={() => changeFlipToTrue(6)}
-                    >
+                <GridItem
+                  item
+                  xs={2}
+                  sm={4}
+                  md={4}
+                  onMouseEnter={() => changeFlipToTrue(6)}
+                  onMouseLeave={() => changeFlipToFalse(6)}
+                >
+                  <ReactCardFlip
+                    isFlipped={flip[6]}
+                    flipDirection="horizontal"
+                    flipSpeedFrontToBack={0.1}
+                    flipSpeedBackToFront={0.1}
+                  >
+                    <Card sx={{ maxWidth: 345 }}>
                       <CardMedia
                         component="img"
                         height="140"
@@ -770,10 +822,7 @@ const Team = () => {
                         </Typography>
                       </CardContent>
                     </Card>
-                    <Card
-                      sx={{ maxWidth: 345, height: "100%" }}
-                      onMouseLeave={() => changeFlipToFalse(6)}
-                    >
+                    <Card sx={{ maxWidth: 345, height: "100%" }}>
                       <CardContent>
                         <Typography
                           variant="h5"
@@ -829,12 +878,21 @@ const Team = () => {
                     </Card>
                   </ReactCardFlip>
                 </GridItem>
-                <GridItem item xs={2} sm={4} md={4}>
-                  <ReactCardFlip isFlipped={flip[7]} flipDirection="horizontal">
-                    <Card
-                      sx={{ maxWidth: 345 }}
-                      onMouseEnter={() => changeFlipToTrue(7)}
-                    >
+                <GridItem
+                  item
+                  xs={2}
+                  sm={4}
+                  md={4}
+                  onMouseEnter={() => changeFlipToTrue(7)}
+                  onMouseLeave={() => changeFlipToFalse(7)}
+                >
+                  <ReactCardFlip
+                    isFlipped={flip[7]}
+                    flipDirection="horizontal"
+                    flipSpeedFrontToBack={0.1}
+                    flipSpeedBackToFront={0.1}
+                  >
+                    <Card sx={{ maxWidth: 345 }}>
                       <CardMedia
                         component="img"
                         height="140"
@@ -859,10 +917,7 @@ const Team = () => {
                         </Typography>
                       </CardContent>
                     </Card>
-                    <Card
-                      sx={{ maxWidth: 345, height: "100%" }}
-                      onMouseLeave={() => changeFlipToFalse(7)}
-                    >
+                    <Card sx={{ maxWidth: 345, height: "100%" }}>
                       <CardContent>
                         <Typography
                           variant="h5"
@@ -918,12 +973,21 @@ const Team = () => {
                     </Card>
                   </ReactCardFlip>
                 </GridItem>
-                <GridItem item xs={2} sm={4} md={4}>
-                  <ReactCardFlip isFlipped={flip[8]} flipDirection="horizontal">
-                    <Card
-                      sx={{ maxWidth: 345 }}
-                      onMouseEnter={() => changeFlipToTrue(8)}
-                    >
+                <GridItem
+                  item
+                  xs={2}
+                  sm={4}
+                  md={4}
+                  onMouseEnter={() => changeFlipToTrue(8)}
+                  onMouseLeave={() => changeFlipToFalse(8)}
+                >
+                  <ReactCardFlip
+                    isFlipped={flip[8]}
+                    flipDirection="horizontal"
+                    flipSpeedFrontToBack={0.1}
+                    flipSpeedBackToFront={0.1}
+                  >
+                    <Card sx={{ maxWidth: 345 }}>
                       <CardMedia
                         component="img"
                         height="140"
@@ -948,10 +1012,7 @@ const Team = () => {
                         </Typography>
                       </CardContent>
                     </Card>
-                    <Card
-                      sx={{ maxWidth: 345, height: "100%" }}
-                      onMouseLeave={() => changeFlipToFalse(8)}
-                    >
+                    <Card sx={{ maxWidth: 345, height: "100%" }}>
                       <CardContent>
                         <Typography
                           variant="h5"
@@ -1008,12 +1069,21 @@ const Team = () => {
                     </Card>
                   </ReactCardFlip>
                 </GridItem>
-                <GridItem item xs={2} sm={4} md={4}>
-                  <ReactCardFlip isFlipped={flip[9]} flipDirection="horizontal">
-                    <Card
-                      sx={{ maxWidth: 345 }}
-                      onMouseEnter={() => changeFlipToTrue(9)}
-                    >
+                <GridItem
+                  item
+                  xs={2}
+                  sm={4}
+                  md={4}
+                  onMouseEnter={() => changeFlipToTrue(9)}
+                  onMouseLeave={() => changeFlipToFalse(9)}
+                >
+                  <ReactCardFlip
+                    isFlipped={flip[9]}
+                    flipDirection="horizontal"
+                    flipSpeedFrontToBack={0.1}
+                    flipSpeedBackToFront={0.1}
+                  >
+                    <Card sx={{ maxWidth: 345 }}>
                       <CardMedia
                         component="img"
                         height="140"
@@ -1038,10 +1108,7 @@ const Team = () => {
                         </Typography>
                       </CardContent>
                     </Card>
-                    <Card
-                      sx={{ maxWidth: 345, height: "100%" }}
-                      onMouseLeave={() => changeFlipToFalse(9)}
-                    >
+                    <Card sx={{ maxWidth: 345, height: "100%" }}>
                       <CardContent>
                         <Typography
                           variant="h5"
@@ -1098,15 +1165,21 @@ const Team = () => {
                     </Card>
                   </ReactCardFlip>
                 </GridItem>
-                <GridItem item xs={2} sm={4} md={4}>
+                <GridItem
+                  item
+                  xs={2}
+                  sm={4}
+                  md={4}
+                  onMouseEnter={() => changeFlipToTrue(10)}
+                  onMouseLeave={() => changeFlipToFalse(10)}
+                >
                   <ReactCardFlip
                     isFlipped={flip[10]}
                     flipDirection="horizontal"
+                    flipSpeedFrontToBack={0.1}
+                    flipSpeedBackToFront={0.1}
                   >
-                    <Card
-                      sx={{ maxWidth: 345 }}
-                      onMouseEnter={() => changeFlipToTrue(10)}
-                    >
+                    <Card sx={{ maxWidth: 345 }}>
                       <CardMedia
                         component="img"
                         height="140"
@@ -1131,10 +1204,7 @@ const Team = () => {
                         </Typography>
                       </CardContent>
                     </Card>
-                    <Card
-                      sx={{ maxWidth: 345, height: "100%" }}
-                      onMouseLeave={() => changeFlipToFalse(10)}
-                    >
+                    <Card sx={{ maxWidth: 345, height: "100%" }}>
                       <CardContent>
                         <Typography
                           variant="h5"
@@ -1189,15 +1259,21 @@ const Team = () => {
                     </Card>
                   </ReactCardFlip>
                 </GridItem>
-                <GridItem item xs={2} sm={4} md={4}>
+                <GridItem
+                  item
+                  xs={2}
+                  sm={4}
+                  md={4}
+                  onMouseEnter={() => changeFlipToTrue(11)}
+                  onMouseLeave={() => changeFlipToFalse(11)}
+                >
                   <ReactCardFlip
                     isFlipped={flip[11]}
                     flipDirection="horizontal"
+                    flipSpeedFrontToBack={0.1}
+                    flipSpeedBackToFront={0.1}
                   >
-                    <Card
-                      sx={{ maxWidth: 345 }}
-                      onMouseEnter={() => changeFlipToTrue(11)}
-                    >
+                    <Card sx={{ maxWidth: 345 }}>
                       <CardMedia
                         component="img"
                         height="140"
@@ -1222,10 +1298,7 @@ const Team = () => {
                         </Typography>
                       </CardContent>
                     </Card>
-                    <Card
-                      sx={{ maxWidth: 345, height: "100%" }}
-                      onMouseLeave={() => changeFlipToFalse(11)}
-                    >
+                    <Card sx={{ maxWidth: 345, height: "100%" }}>
                       <CardContent>
                         <Typography
                           variant="h5"
